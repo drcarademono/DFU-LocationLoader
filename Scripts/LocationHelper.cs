@@ -1182,10 +1182,9 @@ namespace LocationLoader
         static string[] SplitCsvLine(string line)
         {
             List<string> list = new List<string>();
-            string curr = null;
             foreach (Match match in CsvSplit.Matches(line))
             {
-                curr = match.Value;
+                string curr = match.Value;
                 if (0 == curr.Length)
                 {
                     list.Add("");
